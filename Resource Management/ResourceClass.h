@@ -1,27 +1,23 @@
 #pragma once
-#include <string>
+#include "../Graphics/Scene Management/SceneNode.h"
 
-using namespace std;
-template <class T>
+typedef unsigned int GLuint;
 
-class Resource
+class GameObject;
 
+class Resourceclass
 {
 public:
-	Resource(T p)
-		:ID(NULL)
-		,size(0)
-	{}
-	~Resource() {}
+	Resourceclass() {}
+	~Resourceclass() {}
 	
+	virtual void SetID(string id) { ID =  id; }	
 	virtual string GetID() { return ID; }
-	virtual int GetSize() { return size; }
-	virtual void SetID(String id) { ID = id; }
-	virtual void SetSize(T p) { size = sizeof(p); }
 	
 protected:
 	string ID;
-	int size;
+	
+
 
 };
 
